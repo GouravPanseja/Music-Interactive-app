@@ -214,8 +214,30 @@ body{
     
 }
 .screen-1 .song-1{
-    top:27%;
+    top:25%;
 }
+.screen-1 .song-2{
+    top:34%;
+}
+.screen-1 .song-3{
+    top:43%;
+}
+.screen-1 .song-4{
+    top:52%;
+}
+.screen-1 .song-5{
+    top:61%;
+}
+.screen-1 .song-6{
+    top:70%;
+}
+.screen-1 .song-7{
+    top:79%;
+}
+.screen-1 .song-8{
+    top:88%;
+}
+
 
 .screen-1 .song{
     position:absolute;
@@ -244,6 +266,7 @@ body{
     bottom:-25%;
     left:25px;
     cursor:pointer;
+    opacity:0;
     
 }
 
