@@ -213,6 +213,9 @@ body{
 
     
 }
+.screen-1 .song-1{
+    top:27%;
+}
 
 .screen-1 .song{
     position:absolute;
@@ -221,6 +224,18 @@ body{
     align-items:center;
     left:-100%;     /*taken out of normal flow, then just shifted to their left such that all have taken same place */
 
+} 
+
+.screen-1 .song h4{
+    margin-left:20px;
+} 
+.screen-1 .song i{
+    margin-left:auto;
+    width:20px;
+    height:20px;
+} 
+.screen-1 .song h4{
+    margin-left:20px;
 } 
 #back-button-2{
     height:30px;

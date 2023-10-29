@@ -3,6 +3,7 @@ const backButton = document.querySelector('#back-button');
 
 let t1 = gsap.timeline({paused:true, reversed:true});
 let t2 = gsap.timeline({paused:true, reversed:true});
+let reverseButton2 = document.querySelector(".back-button2");
 
 const album1 = document.querySelector(".album-1");
 
@@ -144,9 +145,32 @@ t2.to(
 {
     ease:"power1.inOut",    //  1.7 is the measure of the element goes in opposite direction before going in desired direction to give special effect
     scale:0,
-     
 
 }
+,0
+)
+t2.to(
+    ".album-desc",
+{
+    y:440,
+    ease:"power1.inOut"
+}
+,0
+)
+t2.to(
+    "#back-button",
+{
+    y:264,
+    ease:"power1.inOut"
+}
+,0
+)
+t2.to(
+    ".song-1",
+{
+    xPercent:120,
+}
+  
 ,0
 )
 
