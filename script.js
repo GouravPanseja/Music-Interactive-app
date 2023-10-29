@@ -95,8 +95,9 @@ t1.to(
 }
 ,1
 )
-t1.to("#back-button",{
-    onStart:()=>{ console.log("started")},
+t1.to(
+    "#back-button",{
+  
     ease:"expo.out",
     y:-264,
     opacity:1,
@@ -104,3 +105,49 @@ t1.to("#back-button",{
 1.5)
 
 
+/// 2nd TimeLine
+
+t2.to(
+    ".album-1",
+{
+        height:100,
+        y:-100,
+        ease:"power1.inOut"
+
+}
+,0
+)
+
+t2.to(
+    ".album-1 img",
+{
+        height:100,
+        y:-100,
+        ease:"power1.inOut"
+
+}
+,0
+)
+t2.to(
+    ".play-row h3",
+{
+    ease:"back.inOut(1.7)",    //  1.7 is the measure of the element goes in opposite direction before going in desired direction to give special effect
+    x:-124,
+    opacity:1,
+     
+
+}
+,0
+)
+t2.to(
+    ".play-button",
+{
+    ease:"power1.inOut",    //  1.7 is the measure of the element goes in opposite direction before going in desired direction to give special effect
+    scale:0,
+     
+
+}
+,0
+)
+
+ 
