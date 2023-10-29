@@ -1,4 +1,5 @@
-const playButton = document.querySelector('.play-button')
+const playButton = document.querySelector('.play-button');
+const backButton = document.querySelector('#back-button');
 
 let t1 = gsap.timeline({paused:true, reversed:true});
 let t2 = gsap.timeline({paused:true, reversed:true});
@@ -11,6 +12,10 @@ album1.addEventListener('click',()=>{
 
 playButton.addEventListener("click",()=>{
     t2.play();
+})
+
+backButton.addEventListener('click',()=>{
+    t1.reverse();
 })
 
 
@@ -90,20 +95,18 @@ t1.to(
 t1.to(
 ".play-row .play-button",
 {
-    ease:"power1.inOut",
+    ease: "bounce.out",
+    duration:1,
     scale:1,
 }
 ,1
 )
+t1.to("#back-button",{
+    onStart:()=>{ console.log("started")},
+    ease:"expo.out",
+    y:-264,
+    opacity:1,
+},
+1.5)
 
 
-t2.to(
-    ".play-row .play-button",
-    {
-        ease: "power3.out",
-        scale:1,
-    }
-    ,0.9
-    )
-    
-    

@@ -239,5 +239,6 @@ body{
     bottom:-25%;
     left:24px;
     cursor:pointer;
+    opacity:0;
 
 }
