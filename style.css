@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap');
+
+/*Note that when an item is set to position absolute it is forced out of the normal flow from 
+its orginial position only it doesn't shift to top left corner of the parent as one might think 
+moreover if the parent (here screen) isn't given any fixed height than if the element inside it is given a position such that 
+it requires the parent to expand , then the parent does . here the paragraph in the album-desc is given position absolute 100%*/
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    color:rgb(209, 209, 209);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height:1.7;     /* 1.7 times the font-size of the element*/
+    position:relative; 
+    background: linear-gradient(to right bottom, #323941, #061018) no-repeat center center /cover;
+    height:100vh;
+    box-sizing:border-box;
+
+
+}
+
+
+.container{
+     position:absolute;
+     left:50%;
+     top:50%;
+     transform:translate(-50%,-50%);
+     width:320px;
+     height: 640px;
+     background:  url('images/bg.jpg') no-repeat center center / cover   ;
+     overflow:scroll;
+     border-radius:20px ;
+     box-shadow:0px 56px 72px -30px rgb(0, 0, 0);
+
+}
+  
+.screen-1{
+    position:relative;
+    padding:20px;
+}
+.screen-1 h1{
+    margin:20px;
+    font-weight:400;
+    font-size:22px;
+    
+}
+
+.screen-1 h1 span{
+    font-weight:600;
+    font-size:28px;
+    color:#fff;
+}
+.screen-1 .album-title{
+    margin:40px 10px 0 10px;
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+   
+}
+.screen-1 .album-title h2{
+
+    font-weight:600;
+    font-size:18px;
+    text-transform:capitalize;
+}
+
+.screen-1 .album-title h2:last-child{
+
+    font-weight:400;
+    font-size:16px;
+    
+}
+
+.screen-1 .albums{
+    margin-top:40px;
+}
+
+.screen-1 .album-1{
+    display:flex;
+    background: url('images/album-2.jpg') center center / cover;
+    padding:20px;
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0px 2px 6px 2px rgba(64, 64, 64, 0.66); 
+    
+}
+
+
+.screen-1 .album-1 .left{
+    flex:1;                /*flex-grow:1, flex-shrink:1, flex-basis:0%*/
+
+    
+}
+
+.screen-1 .album-1 .left p{
+    font-size:12px;
+    font-weight:500;
+
+}
+.screen-1 .album-1 .left h2{
+    font-size:18px;
+    color:#fff;
+    line-height:1.2;
+}
+
+.screen-1 .album-1 .album-release{
+    font-size:12px;
+    flex-basis:50%;
+    text-align:end;
+    opacity:0;
+}
+
+.screen-1 .albums .album-row{
+    margin-top:20px;
+    display:flex;
+    height:200px;
+    align-items:center;
+    justify-content:space-between;
+
+}
+.album-row .album-2, .album-3{
+
+    width:45%;
+    height:100%;
+    border-radius:12px; 
+    padding:10px;
+   
+}
+.album-row .album-2{
+   position:relative;
+   box-shadow:0px 2px 6px 2px rgba(64, 64, 64, 0.66);
+   background: url('https://images.unsplash.com/photo-1633329102203-36effd2ca47d?auto=format&fit=crop&q=80&w=2815&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')no-repeat center center /cover ;
+}
+.album-row .album-3{
+    position:relative;
+    box-shadow:0px 2px 6px 2px rgba(64, 64, 64, 0.66);
+   background: url('https://images.unsplash.com/photo-1566842937027-437d91739e89?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')no-repeat center center /cover ;
+}
+.album-row .album-2,.album-3 .left p{
+   font-size:13px;
+}
+.album-row .album-2 .left h2{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:18px;
+}
+.album-row .album-3 .left h2{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:18px;
+}
+
+
+
+.screen-1 .play-row{
+
+}
+
+.screen-1 .play-row h3{
+    font-size:20px;
+    font-weight:600;
+    position: absolute;
+    top: 35.5%;
+    left: -100px;
+    opacity: 0;
+  
+
+}
+.screen-1 .play-row .play-button{
+    margin-left:auto;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background: linear-gradient(to right bottom, #323941, #061018) no-repeat center center /cover;
+    position: absolute;    /*NOTE that this position is relatvie to the screen which has height equal to the total height of the content*/
+    right: 20px;
+    top: 35%;
+    transform: scale(0);
+    
+}
+.screen-1 .play-row .play-button i{     /*get it at center in the circular bg*/
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+    
+}
+
+.screen-1 .album-desc{
+    position:absolute;
+    top:100%;
+    margin-top:30px;
+    font-size:14px;
+    line-height:2;
+    margin-right:10px;
+    padding-inline:20px;
+
+    
+}
+
+.screen-1 .song{
+    position:absolute;
+    display:flex;
+    width:89%;
+    align-items:center;
+    left:-100%;     /*taken out of normal flow, then just shifted to their left such that all have taken same place */
+
+} 
+#back-button-2{
+    height:30px;
+    width:30px;
+    position:absolute;
+    bottom:-25%;
+    left:25px;
+    cursor:pointer;
+    
+}
+
+#back-button{
+    height:30px;
+    width:30px;
+    position:absolute;
+    bottom:-25%;
+    left:24px;
+    cursor:pointer;
+
+}
