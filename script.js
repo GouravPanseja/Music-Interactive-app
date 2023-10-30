@@ -136,6 +136,7 @@ t2.to(
     ".album-1",
 {
         height:100,
+        width:175,
         y:-100,
         ease:"power1.inOut",
 
