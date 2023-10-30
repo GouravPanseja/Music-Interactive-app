@@ -77,7 +77,7 @@ t1.to(".album-1",
 
     onStart:()=>{
      document.querySelector('.album-1').innerHTML = `
-     <video autoplay ><source src="images/album-1Ved.mp4"> </video>`
+     <video autoplay ><source src="images/album-1Ved.mp4"  type="video/mp4"> </video>`
     }
 },
 0.1
