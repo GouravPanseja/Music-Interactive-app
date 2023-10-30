@@ -16,8 +16,20 @@ playButton.addEventListener("click",()=>{
     t2.play();
 })
 
+var originalHTML = `
+<div class="left">
+<p>English Top 10</p>
+<h2>Today's Top Hits</h2>
+</div>
+<div class="album-release">
+<p>12,234 people are listening</p>
+</div>`
+
 backButton.addEventListener('click',()=>{
-    t1.reverse();
+    t1.reverse().eventCallback("onReverseComplete", () => {
+       
+        document.querySelector('.album-1').innerHTML = originalHTML;
+    });
 })
 
 backButton2.addEventListener('click',()=>{
@@ -59,6 +71,14 @@ t1.to(".album-1",
 {
     ease:"power4.Out",
     height:180,
+    background:"transparent",
+    padding:0,
+
+
+    onStart:()=>{
+     document.querySelector('.album-1').innerHTML = `
+     <video autoplay ><source src="images/album-1Ved.mp4"> </video>`
+    }
 },
 0.1
 );
@@ -117,7 +137,8 @@ t2.to(
 {
         height:100,
         y:-100,
-        ease:"power1.inOut"
+        ease:"power1.inOut",
+
 
 }
 ,0
@@ -189,3 +210,36 @@ t2.to(
 },
 0.1
 )
+document.querySelector(".album-1").addEventListener("mouseover",()=>{
+    gsap.to(".album-1",{
+    boxShadow:"0 0 0 0",
+    ease:"power3.inOut",
+    duration:0.1,
+
+})
+})
+document.querySelector(".album-1").addEventListener("mouseleave",()=>{
+    gsap.to(".album-1",{
+    boxShadow:"0px 2px 6px 2px rgba(64, 64, 64, 0.66)",
+    ease:"power3.inOut",
+    duration:0.1,
+
+})
+})
+
+document.querySelector(".play-button").addEventListener("mouseover",()=>{
+    gsap.to(".play-button",{
+        boxShadow:"0 0 0 0",
+        ease:"power3.inOut",
+        duration:0.1,
+
+    })
+})
+document.querySelector(".play-button").addEventListener("mouseleave",()=>{
+    gsap.to(".play-button",{
+        boxShadow:"0px 2px 6px 2px rgba(64, 64, 64, 0.66)",
+        ease:"power3.inOut",
+        duration:0.1,
+
+    })
+})
