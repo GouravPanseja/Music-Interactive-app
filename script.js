@@ -16,6 +16,7 @@ playButton.addEventListener("click",()=>{
     t2.play();
 })
 
+
 var originalHTML = `
 <div class="left">
 <p>English Top 10</p>
@@ -76,6 +77,7 @@ t1.to(".album-1",
 
 
     onStart:()=>{
+      
      document.querySelector('.album-1').innerHTML = `
      <video autoplay loop ><source src="images/album1-Ved.mp4"  type="video/mp4"> your browser doesn't support the video</video>`
     }
